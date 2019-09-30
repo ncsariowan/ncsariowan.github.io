@@ -1,14 +1,128 @@
 <html>
     <head>
         <link rel = "stylesheet" type = "text/css" href = "index.css" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300i,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            buttonOpen = false;
+            transition = 700;
+
+            $(document).ready(function() {
+                $('.button').click(function() {
+                
+                    if (!buttonOpen) {
+                        $("#background-content").animate({
+                            opacity: 0
+                        }, {duration: 1000, queue: false});
+                        $(this).addClass("open-button", transition);
+                        $(this).parent().addClass("open-cell", transition);
+                        
+                        $(".div-cell").not($(this).parent()).addClass("closed-cell", transition);
+                        $(".button").not(this).addClass("closed-button", transition);
+
+                        buttonOpen = true;
+                    } 
+                });
+
+                $('#buttongrid-layer').click(function(e) {
+                    if(buttonOpen && $(e.target).attr('class') != "open-button" && !$(this).has(e.target).length) {
+
+                        console.log("efae")
+                        $("#background-content").animate({
+                            opacity: 1
+                        }, {duration: 1000, queue: false});
+                        $("div").removeClass("open-button", transition);
+                        $("div").removeClass("closed-cell", transition);
+                        $("div").removeClass("closed-button", transition);
+                        $("div").removeClass("open-cell", transition);
+                        buttonOpen = false;
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
         <div id="background">
             <div id="background-content">
                 <h id="background-title">NATHAN SARIOWAN</h>
-                <h1 id="background-subtitle">(webpage in progress)</h1>
+                <!--<h1 id="background-subtitle">(webpage in progress)</h1>-->
             </div>
+        </div>
+        <div id="buttongrid-layer">
+            <div id="buttongrid-content">
+                <div id="content-table">
+                    <div class="div-row">
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title">About Me</div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-row">
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-row">
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                        <div class="div-cell">
+                            <div class="button">
+                                <div class="button-title"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="foreground">
+
         </div>
     </body>
 </html>
