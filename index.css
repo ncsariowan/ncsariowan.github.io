@@ -21,14 +21,24 @@ body {
     text-align: center;
 }
 
-#background-title {
+.background-title {
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: 700;
 }
 
-#background-subtitle {
+.background-subtitle {
     font-style: italic;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: 300;
+}
+
+.background-text {
+    
+    font-style: italic;
+    font-size: 1.5vw;
+}
+
+a {
+    color: black;
 }
