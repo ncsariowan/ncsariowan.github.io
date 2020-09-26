@@ -1,9 +1,12 @@
 html {
     font-size: 100%;
+    background-color: #F2F7F2;
 }
 
 body {
-    margin: 0
+    margin: 0;
+    
+    color: #243B4A;
 }
 
 #background {
@@ -11,7 +14,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 
 #background-content{
@@ -21,13 +24,21 @@ body {
     text-align: center;
 }
 
-.background-title {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 7vw;
-    font-weight: 700;
+#nathan {
+    /* font-family: 'Merriweather Sans', sans-serif; */
+    font-family: 'Secular One', sans-serif;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    font-size: 8vw;
+    /* font-weight: 700; */
+}
+
+#subtitle {
+    margin-bottom: 3em;
 }
 
 .background-subtitle {
+    
     font-style: italic;
     font-size: 3vw;
     font-weight: 300;
@@ -40,5 +51,18 @@ body {
 }
 
 a {
-    color: black;
+    color: #243B4A;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+#resume {
+    font-weight: 800;
+}
+
+#links {
+    font-size: 2rem;
+
 }
