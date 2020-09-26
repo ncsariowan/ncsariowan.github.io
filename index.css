@@ -29,7 +29,7 @@ body {
     font-family: 'Secular One', sans-serif;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
-    font-size: 8vw;
+    font-size: 8em;
     /* font-weight: 700; */
 }
 
@@ -40,14 +40,14 @@ body {
 .background-subtitle {
     
     font-style: italic;
-    font-size: 3vw;
+    font-size: 3em;
     font-weight: 300;
 }
 
 .background-text {
     
     font-style: italic;
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 
 a {
@@ -63,6 +63,6 @@ p {
 }
 
 #links {
-    font-size: 2vw;
+    font-size: 2em;
 
 }
